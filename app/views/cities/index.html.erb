@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <h3>Cities</h3>
+    <%= link_to 'New City', new_city_path, class: 'btn btn-success' %>
+    <br><br>
+
+    <div class="column">
+      <table class="table">
+        <tbody>
+        <% @cities.each do |city| %>
+            <tr id="<%= city.short_name %>">
+              <%= render partial: 'city_details', locals: {city: city} %>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

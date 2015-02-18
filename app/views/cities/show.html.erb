@@ -1,0 +1,11 @@
+<div class="container" style="width: 70%; background: #F5F5F5">
+  <h3>City</h3>
+
+  <p>Name: <%= @city.name if @city.name %></p>
+
+  <p>Short name: <%= @city.short_name if @city.short_name %></p>
+  <td><%= link_to 'All cities', cities_path, class: 'btn btn-success' %></td>
+  <td><%= link_to 'Edit City', edit_city_path(@city), class: 'btn btn-info' %></td>
+  <td><%= link_to 'Delete City', city_path(@city), method: :delete,
+                  class: 'btn btn-danger', data: {confirm: 'Are you sure?'} %></td>
+</div>
